@@ -29,6 +29,11 @@ body {
   color: #fffbf9;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /* Navigation Bar */
@@ -47,6 +52,8 @@ body {
   display: flex;
   justify-content: space-around;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar ul li a {
@@ -89,6 +96,8 @@ body {
   font-size: 1rem;
   white-space: pre-wrap;
   word-wrap: break-word;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .about-section {
@@ -111,16 +120,6 @@ body {
 
 .contact a:hover {
   text-decoration: underline;
-}
-
-
-/* General Body Styles */
-body {
-  background-color: #392628;
-  font-family: 'volte-medium';
-  color: #fffbf9;
-  margin: 0;
-  padding: 0;
 }
 
 /* Projects Section */
@@ -155,7 +154,7 @@ body {
 .project-header {
   background-color: #fca4c4;
   border-radius: 25px 25px 0 0;
-  padding: 0.25 1rem;
+  padding: 0.25rem 1rem;
   color: #e05b84;
   font-family: 'volte-bold';
   font-size: 1.25rem;
@@ -172,6 +171,8 @@ body {
 
 .project-content img {
   max-width: 200px;
+  width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
@@ -192,4 +193,74 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+/* Responsive Media Queries */
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+  .hero-about-container {
+    flex-direction: column;
+    padding-top: 5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .about-section {
+    padding: 1rem 0;
+  }
+  
+  .project-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .project-content p {
+    text-align: center;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .navbar ul li a {
+    font-size: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .ascii-bear {
+    font-size: 0.7rem;
+  }
+  
+  .project {
+    width: 95%;
+  }
+  
+  .project-header {
+    font-size: 1.1rem;
+  }
+  
+  .contact a {
+    margin: 0.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile (320px and below) */
+@media screen and (max-width: 320px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .project-header {
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .ascii-bear {
+    display: none;
+  }
 }
