@@ -1,11 +1,43 @@
+"use client";
+import { useState } from "react";
+
 const Page = () => {
+  // State for hamburger menu toggle
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Function to toggle menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="page-container">
       {/* Navigation Bar */}
       <nav className="navbar">
-        <ul>
+        {/* Logo/Brand */}
+        <div className="navbar-brand">
+          <a href="#home">Kari</a>
+        </div>
+        
+        {/* Desktop Navigation */}
+        <ul className="desktop-menu">
           <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+        </ul>
+        
+        {/* Hamburger Menu Button */}
+        <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`hamburger-line ${menuOpen ? 'line1-active' : ''}`}></div>
+          <div className={`hamburger-line ${menuOpen ? 'line2-active' : ''}`}></div>
+          <div className={`hamburger-line ${menuOpen ? 'line3-active' : ''}`}></div>
+        </div>
+        
+        {/* Mobile Navigation */}
+        <ul className={`mobile-menu ${menuOpen ? 'mobile-menu-active' : ''}`}>
+          <li><a href="#home" onClick={toggleMenu}>Home</a></li>
+          <li><a href="#about" onClick={toggleMenu}>About</a></li>
+          <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
         </ul>
       </nav>
 
@@ -74,7 +106,7 @@ const Page = () => {
 
       {/* Footer */}
       <footer>
-        <p>Made with <span className="pinktext">♥</span> by Kari, 2025</p>
+        <p>Made with <span className="pinktext">♥</span> by Kari, 2025. All rights reserved. </p>
       </footer>
     </div>
   );
