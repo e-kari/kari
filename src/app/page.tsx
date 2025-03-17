@@ -1,14 +1,50 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Page = () => {
   // State for hamburger menu toggle
   const [menuOpen, setMenuOpen] = useState(false);
+  // State for bear rotation angle
+  const [bearRotation, setBearRotation] = useState(0);
+  // State for rotation direction (1 = right, -1 = left)
+  const [rotationDirection, setRotationDirection] = useState(1);
 
   // Function to toggle menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  // Effect for bear tilting animation
+  useEffect(() => {
+    // The animation speed - higher number = slower movement
+    const animationSpeed = 150; // milliseconds between updates
+    
+    // Maximum rotation angle in degrees (positive and negative)
+    const maxRotation = 5; // degrees - subtle tilting
+    
+    // Set up the interval for the animation
+    const interval = setInterval(() => {
+      setBearRotation((prevRotation) => {
+        // Calculate new rotation angle
+        const newRotation = prevRotation + (0.5 * rotationDirection);
+        
+        // If we've reached the maximum in either direction, change direction
+        if (newRotation >= maxRotation) {
+          setRotationDirection(-1);
+          return maxRotation; // Explicitly cap at maximum
+        } else if (newRotation <= -maxRotation) {
+          setRotationDirection(1);
+          return -maxRotation; // Explicitly cap at minimum
+        }
+        
+        // Otherwise return the new calculated rotation
+        return newRotation;
+      });
+    }, animationSpeed);
+    
+    // Clean up interval on component unmount
+    return () => clearInterval(interval);
+  }, [rotationDirection]); // Re-run effect when direction changes
 
   return (
     <div className="page-container">
@@ -48,7 +84,15 @@ const Page = () => {
           <section className="hero">
             <h1>Hey there, I'm <span className="pinktext">Kari</span> !</h1>
             <div className="ascii-section">
-              <pre className="ascii-bear">
+              <pre 
+                className="ascii-bear"
+                style={{ 
+                  display: 'inline-block',
+                  transform: `rotate(${bearRotation}deg)`,
+                  transformOrigin: 'center bottom',
+                  transition: 'transform 0.2s ease-in-out'
+                }}
+              >
                 {`
 ⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⢰⣿⡿⠗⠀⠠⠄⡀⠀⠀⠀⠀
