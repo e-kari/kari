@@ -17,7 +17,7 @@ const Page = () => {
   // Effect for bear tilting animation
   useEffect(() => {
     // The animation speed - higher number = slower movement
-    const animationSpeed = 150; // milliseconds between updates
+    const animationSpeed = 35; // milliseconds between updates
     
     // Maximum rotation angle in degrees (positive and negative)
     const maxRotation = 5; // degrees - subtle tilting
@@ -46,6 +46,22 @@ const Page = () => {
     return () => clearInterval(interval);
   }, [rotationDirection]); // Re-run effect when direction changes
 
+    // Effect to close menu on resize
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth > 768) {
+          setMenuOpen(false);
+        }
+      };
+  
+      window.addEventListener("resize", handleResize);
+  
+      // Initial check on mount
+      handleResize();
+  
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   return (
     <div className="page-container">
       {/* Navigation Bar */}
@@ -72,15 +88,15 @@ const Page = () => {
         {/* Mobile Navigation */}
         <ul className={`mobile-menu ${menuOpen ? 'mobile-menu-active' : ''}`}>
           <li><a href="#home" onClick={toggleMenu}>Home</a></li>
-          <li><a href="#about" onClick={toggleMenu}>About</a></li>
           <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
+          <li><a href="#about" onClick={toggleMenu}>About</a></li>
         </ul>
       </nav>
 
       {/* Main Content */}
       <main>
         {/* Hero and About Me Section */}
-        <section className="hero-about-container" id="home">
+        <section className="hero-intro-container" id="home">
           <section className="hero">
             <h1>Hey there, I'm <span className="pinktext">Kari</span> !</h1>
             <div className="ascii-section">
@@ -111,8 +127,8 @@ const Page = () => {
           </section>
 
           {/* About Me Section */}
-          <section className="about-section" id="about">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <section className="intro-section" id="intro">
+            <p>I’m a passionate software developer with experience in <span className="pinktext">backend</span> development, <span className="pinktext">database</span> management, web development, and technical teaching. I thrive on solving complex problems and making technology accessible to others.</p>
             <div className="contact">
               <a href="mailto:your-email@example.com">Email</a>
               <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -143,6 +159,58 @@ const Page = () => {
                 <img src="https://filestore.community.support.microsoft.com/api/images/72e3f188-79a1-465f-90ca-27262d769841" alt="Project 2" />
                 <p>Description of Project 2 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Me Section */}
+        <section className="about-me" id="about">
+          <h2><span className="pinktext">About</span></h2>
+          <div className="about-container">
+            <div className="about-bio">
+            <p>
+              Hello! I'm Kari, a Computer Science student at Texas A&M-San Antonio with a passion for building robust software solutions. I thrive on solving complex problems through clean, efficient code and am eager to grow as a software engineer.
+            </p>
+            <p>
+              My technical journey has equipped me with a strong foundation in back-end development using Java and Python, alongside front-end skills in HTML, CSS, JavaScript, and Next.js. I also specialize in database management, working with relational databases (SQL) and graph databases like Neo4j.
+            </p>
+            <p>
+              Beyond coding, I love playing the ukulele, roller skating through parks, exploring nature trails, and experimenting with new baking recipes. This blend of analytical thinking and creativity allows me to bring both technical precision and innovative problem-solving to every project I take on.
+            </p>
+            </div>
+            <div className="about-experience">
+            <ul>
+              <li>
+                <div className="experience-title">Computer Science, B.S.</div>
+                <div className="experience-company">Texas A&M University-San Antonio</div>
+                <div className="experience-date">Expected Graduation: 2025</div>
+                <p>Focusing on software engineering principles, data structures, algorithms, and full-stack application development.</p>
+              </li>
+              <li>
+                <div className="experience-title">Teaching Assistant</div>
+                <div className="experience-company">Austin Coding Academy</div>
+                <div className="experience-date">2017-2018</div>
+                <p>Developed curriculum materials and provided one-on-one tutoring to students. Helped bridge complex technical concepts for learners with diverse backgrounds.</p>
+              </li>
+              <li>
+                <div className="experience-title">Volunteer</div>
+                <div className="experience-company">Youth Code Jam</div>
+                <div className="experience-date">2023-2024</div>
+                <p>Facilitated workshops to make coding fun and accessible for K-12 learners. Helped create an inclusive and diverse future tech workforce through hands-on activities.</p>
+              </li>
+              <li>
+                <div className="experience-title">Technical Skills</div>
+                <div className="experience-company">Languages & Technologies</div>
+                <div className="skills-list">
+                  <ul>
+                    <li><strong>Back-end:</strong> Java, Python, PHP, RESTful APIs</li>
+                    <li><strong>Front-end:</strong> HTML, CSS, JavaScript, Next.js</li>
+                    <li><strong>Databases:</strong> SQL, Neo4j</li>
+                    <li><strong>Additional Strengths:</strong> Communication, Teaching, Customer Service</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
             </div>
           </div>
         </section>

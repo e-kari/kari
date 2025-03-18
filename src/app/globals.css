@@ -77,7 +77,6 @@ body {
 }
 
 .desktop-menu li a:hover {
-  text-decoration: underline;
   color: #f997b4;
 }
 
@@ -116,7 +115,7 @@ body {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 60px;
+  top: 30px;
   left: 0;
   width: 100%;
   background-color: #492e33;
@@ -151,7 +150,7 @@ body {
 }
 
 /* Hero + About Section (Flex layout) */
-.hero-about-container {
+.hero-intro-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -183,7 +182,7 @@ body {
   overflow: hidden;
 }
 
-.about-section {
+.intro-section {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -195,14 +194,14 @@ body {
 .contact a {
   display: inline-block;
   margin: 0.5rem;
-  color: #d43569; /* Dark pink for contact links */
+  color: #f997b4;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'volte-semibold'; /* Semi-bold for contact links */
+  font-family: 'volte-bold';
 }
 
 .contact a:hover {
-  text-decoration: underline;
+  color: #d43569;
 }
 
 /* Projects Section */
@@ -220,14 +219,14 @@ body {
 
 .project-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
 .project {
-  width: 90%;
-  max-width: 800px;
+  width: calc(50% - 2rem);
+  max-width: 500px;
   background-color: #fdd5e0;
   border-radius: 25px;
   border: 2px solid #d73c6c;
@@ -266,6 +265,89 @@ body {
   text-align: left;
 }
 
+/* About Me Section */
+.about-me {
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about-me h2 {
+  font-family: 'volte-bold';
+  color: #fffbf9;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-bio {
+  flex: 1;
+  background-color: #392628;
+  padding: 2rem;
+  text-align: left;
+  border-left: 5px solid #ffd5e1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-experience {
+  flex: 1;
+  background-color: #392628;
+  padding: 2rem;
+  text-align: left;
+  border-right: 5px solid #fca4c4;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.about-experience ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-experience li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about-experience li:before {
+  content: "•";
+  color: #f997b4;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.experience-title {
+  font-family: 'volte-bold';
+  color: #f997b4;
+  margin-bottom: 0.25rem;
+}
+
+.experience-company {
+  font-family: 'volte-semibold';
+  color: #fffbf9;
+  margin-bottom: 0.25rem;
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: #fca4c4;
+  margin-bottom: 0.5rem;
+}
+
+
 /* Footer */
 footer {
   background-color: #392628;
@@ -291,7 +373,7 @@ footer {
     display: none;
   }
   
-  .hero-about-container {
+  .hero-intro-container {
     flex-direction: column;
     padding-top: 5rem;
   }
@@ -300,8 +382,13 @@ footer {
     font-size: 2rem;
   }
   
-  .about-section {
+  .intro-section {
     padding: 1rem 0;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 500px;
   }
   
   .project-content {
@@ -311,6 +398,26 @@ footer {
   
   .project-content p {
     text-align: center;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-bio {
+    border-left: none;
+    border-top: 5px solid #ffd5e1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0;
+  }
+  
+  .about-experience {
+    border-right: none;
+    border-bottom: 5px solid #fca4c4;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 }
 /* Mobile (480px and below) */
@@ -339,6 +446,26 @@ footer {
     margin: 0.25rem;
     font-size: 0.9rem;
   }
+
+  .about-me h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-bio, .about-experience {
+    padding: 1.5rem;
+  }
+  
+  .experience-title {
+    font-size: 1.1rem;
+  }
+  
+  .experience-company {
+    font-size: 0.95rem;
+  }
+  
+  .experience-date {
+    font-size: 0.85rem;
+  }
 }
 
 /* Small Mobile (320px and below) */
@@ -353,5 +480,21 @@ footer {
   
   .ascii-bear {
     display: none;
+  }
+
+  .about-me h2 {
+    font-size: 1.5rem;
+  }
+  
+  .about-bio, .about-experience {
+    padding: 1rem;
+  }
+  
+  .about-experience li:before {
+    font-size: 1rem;
+  }
+  
+  .experience-title {
+    font-size: 1rem;
   }
 }
