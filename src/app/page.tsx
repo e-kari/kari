@@ -133,7 +133,7 @@ const Page = () => {
               <a href="mailto:enya.kpg@gmail.com">Email</a>
               <a href="https://www.linkedin.com/in/enya-palomino/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://github.com/e-kari" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="/path-to-your-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href="kari-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </section>
         </section>
