@@ -16,11 +16,11 @@ const Page = () => {
 
   // Effect for bear tilting animation
   useEffect(() => {
-    // The animation speed - higher number = slower movement
-    const animationSpeed = 35; // milliseconds between updates
+    // The animation speed: higher number = slower movement
+    const animationSpeed = 35;
     
     // Maximum rotation angle in degrees (positive and negative)
-    const maxRotation = 5; // degrees - subtle tilting
+    const maxRotation = 5; // degrees: subtle tilting
     
     // Set up the interval for the animation
     const interval = setInterval(() => {
@@ -128,11 +128,11 @@ const Page = () => {
 
           {/* About Me Section */}
           <section className="intro-section" id="intro">
-            <p>I’m a passionate software developer with experience in <span className="pinktext">backend</span> development, <span className="pinktext">database</span> management, web development, and technical teaching. I thrive on solving complex problems and making technology accessible to others.</p>
+            <h3>A problem solver at heart, I approach every challenge with patience, a level-headed mindset, and a deep curiosity to keep learning and improving. Whether it's optimizing code, designing robust architectures, or exploring new ways to solve technical puzzles, I thrive on continuous growth and innovation.</h3>
             <div className="contact">
-              <a href="mailto:your-email@example.com">Email</a>
-              <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="mailto:enya.kpg@gmail.com">Email</a>
+              <a href="https://www.linkedin.com/in/enya-palomino/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/e-kari" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="/path-to-your-resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </section>
@@ -206,6 +206,7 @@ const Page = () => {
                     <li><strong>Back-end:</strong> Java, Python, PHP, RESTful APIs</li>
                     <li><strong>Front-end:</strong> HTML, CSS, JavaScript, Next.js</li>
                     <li><strong>Databases:</strong> SQL, Neo4j</li>
+                    <li><strong>Tools & Testing:</strong> Git, JUnit, Postman, Static Analysis (Pylint, Checkstyle, SpotBugs)</li>
                     <li><strong>Additional Strengths:</strong> Communication, Teaching, Customer Service</li>
                   </ul>
                 </div>

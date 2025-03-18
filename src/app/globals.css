@@ -347,6 +347,25 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.skills-list ul {
+  margin-top: 0.5rem;
+  padding-left: 0;
+}
+
+.skills-list li {
+  padding-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.skills-list li:before {
+  content: none;
+}
+
+.skills-list strong {
+  color: #f997b4;
+  font-family: 'volte-semibold';
+}
+
 
 /* Footer */
 footer {
