@@ -205,11 +205,12 @@ const Page = () => {
                 <div className="experience-company">Languages & Technologies</div>
                 <div className="skills-list">
                   <ul>
-                    <li><strong>Back-end:</strong> Java, Python, PHP, RESTful APIs</li>
-                    <li><strong>Front-end:</strong> HTML, CSS, JavaScript, Bootstrap</li>
-                    <li><strong>Databases:</strong> SQL, Neo4j</li>
-                    <li><strong>Tools & Testing:</strong> Git, JUnit, Postman, Static Analysis (Pylint, Checkstyle, SpotBugs)</li>
-                    <li><strong>Additional Strengths:</strong> Time management, colla</li>
+                    <li><strong>Back-end:</strong> Java, Python, PHP, RESTful APIs, Kotlin, Swift</li>
+                    <li><strong>Front-end:</strong> HTML, CSS, JavaScript, Bootstrap, Next.js, TypeScript</li>
+                    <li><strong>Databases:</strong> SQL (MongoDB, PostgreSQL), Neo4j</li>
+                    <li><strong>Methodologies:</strong>Agile</li>
+                    <li><strong>Tools & Testing:</strong> Git, JUnit, Postman, Static Analysis (Pylint, Checkstyle, SpotBugs), Android, XCode, Railway Deployment</li>
+                    <li><strong>Additional Strengths:</strong> Time management, Collaboration, Problem Solving, Critical Thinking, Clear Communication </li>
                   </ul>
                 </div>
               </li>
