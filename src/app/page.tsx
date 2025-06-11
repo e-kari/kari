@@ -98,7 +98,7 @@ const Page = () => {
         {/* Hero and About Me Section */}
         <section className="hero-intro-container" id="home">
           <section className="hero">
-            <h1>Hey there, I'm <span className="pinktext">Kari</span> !</h1>
+            <h1>Hey there, I&apos;m <span className="pinktext">Kari</span> !</h1>
             <div className="ascii-section">
               <pre 
                 className="ascii-bear"
@@ -128,7 +128,7 @@ const Page = () => {
 
           {/* About Me Section */}
           <section className="intro-section" id="intro">
-            <h3>I’m a driven software engineer with a strong foundation in Java and web development. I’ve built real-world projects, including a custom Discord bot, and I enjoy taking on new challenges that push me to grow. In university, I consistently rose to meet complex problems, learning new tools and technologies to deliver effective solutions. I bring a growth mindset, a passion for clean and efficient code, and a commitment to continuous improvement in everything I build.</h3>
+            <h3>I&apos;m a driven software engineer with a strong foundation in Java and web development. I&apos;ve built real-world projects, including a custom Discord bot, and I enjoy taking on new challenges that push me to grow. In university, I consistently rose to meet complex problems, learning new tools and technologies to deliver effective solutions. I bring a growth mindset, a passion for clean and efficient code, and a commitment to continuous improvement in everything I build.</h3>
             <div className="contact">
               <a href="mailto:enya.kpg@gmail.com">Email</a>
               <a href="https://www.linkedin.com/in/enya-palomino/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -183,13 +183,13 @@ const Page = () => {
           <div className="about-container">
             <div className="about-bio">
             <p>
-              I’m a first-generation immigrant and the first in my family to graduate from university, a journey that taught me the value of resilience, discipline, and self-belief.
+              I&apos;m a first-generation immigrant and the first in my family to graduate from university, a journey that taught me the value of resilience, discipline, and self-belief.
             </p>
             <p>
-              I discovered programming through curiosity, but I stayed because of how empowering it feels to bring ideas to life with code. Over time, I’ve built projects that challenged me, taught me new languages and frameworks, and reminded me that I’m capable of more than I imagined. Whether it’s building something from scratch or refining my skills through study, I pursue excellence with intent. 
+              I discovered programming through curiosity, but I stayed because of how empowering it feels to bring ideas to life with code. Over time, I&apos;ve built projects that challenged me, taught me new languages and frameworks, and reminded me that I&apos;m capable of more than I imagined. Whether it&apos;s building something from scratch or refining my skills through study, I pursue excellence with intent. 
             </p>
             <p>
-              Outside of tech, I’m a creative at heart. I roller skate, play guitar and ukulele, dabble in poetry, cook, and find joy in games that tell good stories. That same creativity fuels my work as a developer. I’m always learning, always growing, and always excited for what’s next.
+              Outside of tech, I&apos;m a creative at heart. I roller skate, play guitar and ukulele, dabble in poetry, cook, and find joy in games that tell good stories. That same creativity fuels my work as a developer. I&apos;m always learning, always growing, and always excited for what&apos;s next.
             </p>
             </div>
             <div className="about-experience">
