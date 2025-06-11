@@ -142,24 +142,38 @@ const Page = () => {
         <section className="projects" id="projects">
           <h2>Projects</h2>
           <div className="project-container">
+
             <div className="project">
               <div className="project-header">
-                <h3>Project 1</h3>
+                <h3><a href="https://github.com/e-kari/kari">Personal Portfolio Website</a></h3>
               </div>
               <div className="project-content">
-                <img src="https://filestore.community.support.microsoft.com/api/images/72e3f188-79a1-465f-90ca-27262d769841" alt="Project 1" />
-                <p>Description of Project 1 </p>
+                <img src="/images/portfolio.png" alt="Kari's Portfolio Website Screenshot" />
+
+                <p>
+                  <li>A responsive, custom-coded portfolio website built using <strong>Next.js</strong> and <strong>TypeScript</strong></li><br></br>
+                  <li>Features a playful bear animation, a soft and cohesive <strong>color palette</strong>, and a fully personalized layout. I designed and implemented each section, including <strong>project cards</strong>, an <strong>about me section</strong>, and a responsive navigation bar, applying best practices in <strong>frontend development</strong> and <strong>UI design</strong>.</li><br></br>
+                  <li>Through this project, I gained hands-on experience with <strong>React-based frameworks</strong>, component architecture, styling systems, and preparing an app for deployment.</li><br></br>
+                  <strong>Tech:</strong> Next.js · TypeScript · React · Tailwind CSS · Git · Vercel
+                </p>
               </div>
             </div>
+
             <div className="project">
               <div className="project-header">
-                <h3>Project 2</h3>
+                <h3><a href="https://github.com/e-kari/gachhan">Gacchan: Discord Gacha Bot</a></h3>
               </div>
               <div className="project-content">
-                <img src="https://filestore.community.support.microsoft.com/api/images/72e3f188-79a1-465f-90ca-27262d769841" alt="Project 2" />
-                <p>Description of Project 2 </p>
+                <img src="/images/gacchan.png" alt="Gacchan Discord Bot Screenshot" />
+                <p>
+                  <li>Developed a full-featured Discord bot using <strong>Python</strong>, <strong>discord.py</strong>, and <strong>SQLite</strong> to deliver a gacha-style experience for a Final Fantasy XIV roleplay community.</li><br></br>
+                  <li>Supports <strong>slash commands</strong>, <strong>role-based access control</strong>, and persistent user data management through a custom <strong>SQLAlchemy backend</strong>.</li><br></br>
+                  <li>Features include randomized card pulls, inventory tracking, and admin-level controls for managing in-game currency and collections.</li><br></br>
+                  This project strengthened my skills in <strong>backend development</strong>, <strong>API design</strong>, and <strong>user-focused feature implementation</strong>.
+                </p>
               </div>
             </div>
+          
           </div>
         </section>
 

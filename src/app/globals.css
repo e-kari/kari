@@ -254,8 +254,17 @@ body {
 .project-content img {
   max-width: 200px;
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+a {
+    color: #d43569;
+    
+}
+
+a:hover {
+  color: #fffbf9;
 }
 
 .project-content p {
