@@ -128,7 +128,7 @@ const Page = () => {
 
           {/* About Me Section */}
           <section className="intro-section" id="intro">
-            <h3>A problem solver at heart, I approach every challenge with patience, a level-headed mindset, and a deep curiosity to keep learning and improving. Whether it's optimizing code, designing robust architectures, or exploring new ways to solve technical puzzles, I thrive on continuous growth and innovation.</h3>
+            <h3>I’m a driven software engineer with a strong foundation in Java and web development. I’ve built real-world projects, including a custom Discord bot, and I enjoy taking on new challenges that push me to grow. In university, I consistently rose to meet complex problems, learning new tools and technologies to deliver effective solutions. I bring a growth mindset, a passion for clean and efficient code, and a commitment to continuous improvement in everything I build.</h3>
             <div className="contact">
               <a href="mailto:enya.kpg@gmail.com">Email</a>
               <a href="https://www.linkedin.com/in/enya-palomino/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -169,13 +169,13 @@ const Page = () => {
           <div className="about-container">
             <div className="about-bio">
             <p>
-              Hello! I'm Kari, a Computer Science student at Texas A&M-San Antonio with a passion for building robust software solutions. I thrive on solving complex problems through clean, efficient code and am eager to grow as a software engineer.
+              I’m a first-generation immigrant and the first in my family to graduate from university, a journey that taught me the value of resilience, discipline, and self-belief.
             </p>
             <p>
-              My technical journey has equipped me with a strong foundation in back-end development using Java and Python, alongside front-end skills in HTML, CSS, JavaScript, and Next.js. I also specialize in database management, working with relational databases (SQL) and graph databases like Neo4j.
+              I discovered programming through curiosity, but I stayed because of how empowering it feels to bring ideas to life with code. Over time, I’ve built projects that challenged me, taught me new languages and frameworks, and reminded me that I’m capable of more than I imagined. Whether it’s building something from scratch or refining my skills through study, I pursue excellence with intent. 
             </p>
             <p>
-              Beyond coding, I love playing the ukulele, roller skating through parks, exploring nature trails, and experimenting with new baking recipes. This blend of analytical thinking and creativity allows me to bring both technical precision and innovative problem-solving to every project I take on.
+              Outside of tech, I’m a creative at heart. I roller skate, play guitar and ukulele, dabble in poetry, cook, and find joy in games that tell good stories. That same creativity fuels my work as a developer. I’m always learning, always growing, and always excited for what’s next.
             </p>
             </div>
             <div className="about-experience">
@@ -183,8 +183,10 @@ const Page = () => {
               <li>
                 <div className="experience-title">Computer Science, B.S.</div>
                 <div className="experience-company">Texas A&M University-San Antonio</div>
-                <div className="experience-date">Expected Graduation: 2025</div>
+                <div className="experience-date">Graduation: 2025</div>
                 <p>Focusing on software engineering principles, data structures, algorithms, and full-stack application development.</p>
+                <p><b>Mobile Computing Certificate</b>: Focus on Web Application Development, Android Development (Kotlin / Android Studio) & iOS Development (Swift / XCode). </p>
+                <p><b>Cybersecurity Certificate</b>: Focus on Programming Fundamentals, Intro to Cybersecurity, Computer Networks & Penetration Testing.</p>
               </li>
               <li>
                 <div className="experience-title">Teaching Assistant</div>
@@ -204,10 +206,10 @@ const Page = () => {
                 <div className="skills-list">
                   <ul>
                     <li><strong>Back-end:</strong> Java, Python, PHP, RESTful APIs</li>
-                    <li><strong>Front-end:</strong> HTML, CSS, JavaScript, Next.js</li>
+                    <li><strong>Front-end:</strong> HTML, CSS, JavaScript, Bootstrap</li>
                     <li><strong>Databases:</strong> SQL, Neo4j</li>
                     <li><strong>Tools & Testing:</strong> Git, JUnit, Postman, Static Analysis (Pylint, Checkstyle, SpotBugs)</li>
-                    <li><strong>Additional Strengths:</strong> Communication, Teaching, Customer Service</li>
+                    <li><strong>Additional Strengths:</strong> Time management, colla</li>
                   </ul>
                 </div>
               </li>
